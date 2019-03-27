@@ -131,6 +131,60 @@ input[type='checkbox']:checked + label:before {
   background-color: #4370ce;
 }
 
+.select {
+  height: 80px;
+  width: 100%;
+  border: 1px solid #dddddd;
+  position: relative;
+}
+
+.select:after {
+  content: '';
+  position: absolute;
+  z-index: 9;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: url("/img/arrow_down.png") no-repeat center;
+  background-size: 100%;
+}
+
+.select:hover {
+  cursor: pointer;
+}
+
+.select_checked {
+  padding-left: 30px;
+  line-height: 80px;
+}
+
+.select__dropdown {
+  position: absolute;
+  top: 80px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #dddddd;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: none;
+}
+
+.select__dropdown_open {
+  display: block;
+}
+
+.select__option {
+  padding: 20px;
+}
+
+.select__option:hover {
+  background-color: #f5f6f8;
+}
+
 .checkbox-label {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -154,6 +208,9 @@ input[type='checkbox']:checked + label:before {
 }
 
 @media (max-width: 576px) {
+  .button {
+    font-size: 10px;
+  }
   .button-o {
     font-size: 10px;
   }
@@ -288,6 +345,10 @@ input[type='checkbox']:checked + label:before {
   margin: 5px;
 }
 
+.slick-dots li button {
+  display: none;
+}
+
 .slick-dots:hover {
   cursor: pointer;
 }
@@ -400,6 +461,14 @@ input[type='checkbox']:checked + label:before {
   border-left: 1px solid rgba(81, 11, 186, 0.1);
   height: 80px;
   width: 70px;
+}
+
+.menu-button:hover {
+  cursor: pointer;
+}
+
+.menu-button:focus {
+  outline: none;
 }
 
 .menu-button__line {
@@ -682,6 +751,12 @@ input[type='checkbox']:checked + label:before {
           box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
 }
 
+.catalog-card:hover .catalog-card__buttons {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
 .catalog-card__buttons {
   position: absolute;
   bottom: 0;
@@ -689,6 +764,11 @@ input[type='checkbox']:checked + label:before {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 .catalog-card__button {

@@ -70,7 +70,7 @@
 	</header>
 	<!-- /.header -->
 <main>
-	<section class="offer bg-secondary">
+	<section class="offer bg-secondary" id="offer">
 		<div class="container">
 <div class="offer__block offer-block offer-block_calc-bg">
 <h2 class="offer__title">ОСТАВЬТЕ ЗАЯВКУ НА РАСЧЕТ</h2>
@@ -78,15 +78,23 @@
 <form action="#" class="form offer__form">
 <div class="form__row">
 	<div class="form__group">
-		<lable class="form__label">Вид стекла</lable>
+		<label for="" class="form__label" >Вид стекла</label>
+		<input type="hidden" name="type" id="select-type" value="С печатью">
+		<div class="select form__select">
+			<div class="select_checked">С печатью</div>
+			<ul class="select__dropdown">
+				<li class="select__option" data-value="С печатью">С печатью</li>
+				<li class="select__option" data-value="Без печати">Без печати</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="form__group">
+		<label class="form__label">Ширина, см</label>
 		<input type="text" class="input form__input">
 	</div>
 	<div class="form__group">
-		<lable class="form__label">Ширина, см</lable>
-		<input type="text" class="input form__input">
-	</div>
-	<div class="form__group">
-		<lable class="form__label">Висота, см</lable>
+		<label class="form__label">Висота, см</label>
 		<input type="text" class="input form__input">
 	</div>
 </div>
@@ -492,7 +500,9 @@
 				<!-- /.price-card__cost -->
 			</div>
 			<!-- /.price-card__pricetag -->
-			<div class="price-card__button"><button class="button">Оставить заявку</button> <!-- /.button --></div>
+			<div class="price-card__button">
+				<button class="button">Оставить заявку</button> 
+				<!-- /.button --></div>
 			<!-- /.price-card__button -->
 		</div>
 		<!-- /.price-card__text -->
@@ -859,19 +869,6 @@
 	<script src="js/jquery.event.move.js"></script>
 	<script src="js/jquery.twentytwenty.js"></script>
 	<script src="js/slick.min.js"></script>
-	<script>
-	$(window).load(function() {
-  	$(".before-after").twentytwenty({
-			before_label: 'без скинали', // Set a custom before label
-      after_label: 'со скинили' // Set a custom after label
-		});
-  	$('.before-slider').slick({
-			draggable: false,
-			dots: true,
-			prevArrow: $('.arrow-left'),
-			nextArrow: $('.arrow-right')
-	});
-});
-</script>
+	<script src="js/main.js"></script>
 </body>
 </html>
