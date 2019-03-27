@@ -7,14 +7,22 @@
 			line-height: 26px
 			color: #000000
 			font-size: 20px
-
 			p
 				margin: 0
 			p:first-child
 				margin-bottom: 15px
-
-		 
 		&__image
 			float: left
 			margin-right: 70px
 			height: 271px
+@media (max-width: 768px)
+	.factory
+		&-block
+			margin: 0 20px
+			&__image
+				margin-right: 0
+				margin-bottom: 20px
+			&__text
+				width: 100%
+				p
+					text-align: justify

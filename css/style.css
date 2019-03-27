@@ -27,6 +27,10 @@
   }
 }
 
+.hero, .section, .footer, .offer {
+  min-width: 460px;
+}
+
 @font-face {
   font-family: 'Proxima Nova Semibold';
   src: url("../fonts/ProximaNova-Semibold.eot");
@@ -150,9 +154,6 @@ input[type='checkbox']:checked + label:before {
 }
 
 @media (max-width: 576px) {
-  .button {
-    font-size: 10px;
-  }
   .button-o {
     font-size: 10px;
   }
@@ -162,6 +163,141 @@ input[type='checkbox']:checked + label:before {
   .section-title {
     font-size: 24px;
   }
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+.slick-dots {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.slick-dots li {
+  width: 10px;
+  height: 10px;
+  background-color: #d1d1d1;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.slick-dots:hover {
+  cursor: pointer;
+}
+
+.slick-active {
+  background-color: #5b7fda;
+}
+
+.slick-dots li.slick-active {
+  background-color: #5b7fda;
 }
 
 .navbar {
@@ -888,6 +1024,22 @@ input[type='checkbox']:checked + label:before {
   height: 271px;
 }
 
+@media (max-width: 768px) {
+  .factory-block {
+    margin: 0 20px;
+  }
+  .factory-block__image {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .factory-block__text {
+    width: 100%;
+  }
+  .factory-block__text p {
+    text-align: justify;
+  }
+}
+
 .contacts-block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -929,6 +1081,10 @@ input[type='checkbox']:checked + label:before {
     max-width: 200px;
     margin: auto;
   }
+}
+
+.questions {
+  padding: 90px 0;
 }
 
 .questions__title {
@@ -1033,5 +1189,62 @@ input[type='checkbox']:checked + label:before {
     text-align: center;
     text-align: center;
   }
+}
+
+.before-slider__dots li.slick-active {
+  background-color: #5b7fda;
+}
+
+.before-slider-wrap {
+  max-width: 640px;
+  margin: auto;
+  position: relative;
+}
+
+.before-slider-arrows {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  top: 50%;
+  width: 110%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.before-slider.slick-dots {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.arrow {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.arrow:focus {
+  outline: none;
+}
+
+.arrow-left {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.arrow-right {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,36 @@
+.before
+	&-slider
+		&__dots
+			li
+				&.slick-active
+					background-color: #5b7fda
+		&-wrap
+			max-width: 640px
+			margin: auto
+			position: relative
+		&-arrows
+			position: absolute
+			display: flex
+			justify-content: space-between
+			top: 50%
+			width: 110%
+			transform: translateY(-100%)
+			
+		&.slick-dots
+			margin: auto
+			display: flex
+			justify-content: center
+			list-style: none
+			padding: 0
+			margin-top: 30px
+.arrow
+	background-color: transparent
+	border: none
+	cursor: pointer
+	&:focus
+		outline: none
+	&-left
+		transform: translateX(-100%)
+	&-right
+		transform: translateX(-100%)
+
