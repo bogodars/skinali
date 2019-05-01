@@ -14,6 +14,12 @@ $('.menu-button').on('click', function(){
 
 });
 
+var $hamburger = $(".hamburger");
+  $hamburger.on("click", function(e) {
+    $hamburger.toggleClass("is-active");
+    // Do something else, like open/close menu
+  });
+
 /* select settings*/
 	$('.select_checked').on('click', function() {
 		$('.select__dropdown').toggleClass('select__dropdown_open');
